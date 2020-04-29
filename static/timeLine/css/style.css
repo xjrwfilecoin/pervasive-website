@@ -17,23 +17,23 @@ img{display:inline-block;vertical-align:middle;border:0;}
 .about-main2{height: 75vh;min-height:520px;width: 100%;max-width: 1300px; margin: 0 auto;overflow: hidden;}
 .about-main2 .licheng-bg{background-color: transparent;width: 100%;height: 100%;position: relative;}
 .about-main2 .licheng-bg .warper{height: 100%;}
-.about-main2 .licheng-bg img{height: 42vh; width:100%;position: absolute; bottom: 5vh;left: 0;}
+.about-main2 .licheng-bg img{height: 44vh; width:100%;position: absolute; bottom: 6vh;left: 0;}
 .about-main2 .ny-title{padding-top: 80px;}
 .about-main2 .licheng-content{position: absolute;width: 100%;height: 100%;}
 .about-main2 .licheng-content .swiper-wrapper,.about-main2 .licheng-content .swiper-slide,.about-main2 .licheng-content ul{width: 100%;height: 100%;}
 
 .about-main2 .licheng-content ul li{width: 20%;float: left;height: 100%;}
 .about-main2 .licheng-content ul li a{display: block;width: 100%;position: relative;height: 320px}
-.about-main2 .licheng-content ul li.item1 a{top: 32vh;}
-.about-main2 .licheng-content ul li.item2 a{top: 23vh;}
-.about-main2 .licheng-content ul li.item3 a{top: 14vh;}
-.about-main2 .licheng-content ul li.item4 a{top: 5vh;}
-.about-main2 .licheng-content ul li.item5 a{top: -4vh;}
-.about-main2 .licheng-content ul li.item1 .lc-right{bottom: 20px;}
-.about-main2 .licheng-content ul li.item2 .lc-right{bottom: 20px;}
-.about-main2 .licheng-content ul li.item3 .lc-right{bottom: 60px;}
-.about-main2 .licheng-content ul li.item4 .lc-right{bottom: 15px;}
-.about-main2 .licheng-content ul li.item5 .lc-right{bottom: 50px;} 
+.about-main2 .licheng-content ul li.item1 a{top: 30vh;}
+.about-main2 .licheng-content ul li.item2 a{top: 21vh;}
+.about-main2 .licheng-content ul li.item3 a{top: 12vh;}
+.about-main2 .licheng-content ul li.item4 a{top: 3vh;}
+.about-main2 .licheng-content ul li.item5 a{top: -6vh;}
+.about-main2 .licheng-content ul li.item1 .lc-right{bottom: 50px;}
+.about-main2 .licheng-content ul li.item2 .lc-right{bottom: 50px;}
+.about-main2 .licheng-content ul li.item3 .lc-right{bottom: 65px;}
+.about-main2 .licheng-content ul li.item4 .lc-right{bottom: 35px;}
+.about-main2 .licheng-content ul li.item5 .lc-right{bottom: 60px;} 
 
 .about-main2 .licheng-content ul li .lc-left{position: absolute;}
 .about-main2 .licheng-content ul li.item1 .line{height: 85px;width: 3px;display: block;background-color: #D7D7D7;position: relative;left: 30px;top:185px}

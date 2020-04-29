@@ -246,7 +246,6 @@
     methods: {
       handleScroll() {
         var top = (document.body.scrollTop || document.documentElement.scrollTop || window.pageXOffset)
-        console.log('xxxxxxxxxxxxxx', top)
         if (top > 265 && top < 3235) {
           this.showOne = true
         } else if (top >= 3235) {
