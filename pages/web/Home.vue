@@ -13,7 +13,7 @@
 
     <div class="first_show">
       <h1>{{ $t('about.title') }}</h1>
-      <p>目前唯一<span class="special_p">已经</span>在公网上实施的、可通过<span class="special_p">1024分片</span>实现<span
+      <p>目前唯一<span class="special_p">已经</span>适用于公网的、可通过<span class="special_p">1024分片</span>实现<span
           class="special_p">64000TPS</span>的全分片系统</p>
       <el-button>Try me<i class="el-icon-right el-icon--right"></i></el-button>
     </div>
@@ -27,28 +27,28 @@
         <el-row :gutter="70" style="margin:0 auto">
           <el-col :span="8">
             <div class="questions_item">
-              <h5>分片链的安全性</h5>
+              <h5>分片安全性</h5>
               <img src="~/assets/images/web/home/question_one.png" />
               <div class="questions_detail">
-                <p>分片后分片内的算力降低导致分片的安全性问题</p>
+                <p>分片后算力只有全网的分片数分之一，恶意节点集中攻击单分片所产生的安全性问题</p>
               </div>
             </div>
           </el-col>
           <el-col :span="8">
             <div class="questions_item">
-              <h5>带宽限制</h5>
+              <h5>带宽膨胀</h5>
               <img src="~/assets/images/web/home/question_two.png" />
               <div class="questions_detail">
-                <p>即使在最优通信条件下，跨分片传输所需带宽与分片数量成平方关系导致分片无法扩展到成百上千片</p>
+                <p>即使只保证最终一致性，跨分片传输所需的带宽与分片数量成平方关系上升限制了分片的实际数量</p>
               </div>
             </div>
           </el-col>
           <el-col :span="8">
             <div class="questions_item">
-              <h5>区块、分片的快速确定</h5>
+              <h5>回滚雪崩</h5>
               <img src="~/assets/images/web/home/question_three.png" />
               <div class="questions_detail">
-                <p>某个区块被回滚导致其他所有分片跟着回滚的“回滚雪崩效应”</p>
+                <p>某个区块被回滚将导致其他所有分片都有可能需要回滚，然后导致更多回滚导致分片系统不稳定</p>
               </div>
             </div>
           </el-col>
@@ -77,9 +77,9 @@
           <el-col :span="12">
             <div class="project_item_one">
               <img src="~/assets/images/web/home/project_one.png" />
-              <h5>分片共识</h5>
+              <h5>安全性经过证明的分片共识</h5>
               <div class="project_detail_one">
-                <p>提出能够满足安全性要求的分片内共识算法解决六大问题</p>
+                <p>通过六个方面研究和证明，得到能够满足安全性要求的分片共识算法</p>
                 <el-button size="mini">查看详情<i class="el-icon-right el-icon--right"></i></el-button>
               </div>
             </div>
@@ -87,9 +87,9 @@
           <el-col :span="12">
             <div class="project_item_two">
               <img src="~/assets/images/web/home/project_two.png" />
-              <h5>P2P作为跨链传输的数据系统</h5>
+              <h5>主动P2P存储实现数据按需读取</h5>
               <div class="project_detail_two">
-                <p>具有主动扩散机制的P2P存储系统使跨分片传输数据最优化</p>
+                <p>基于P2P的组播和主动存储系统，使数据只在需要的分片内传输实现最小化</p>
               </div>
             </div>
           </el-col>
@@ -97,18 +97,18 @@
         <el-row :gutter="90">
           <el-col :span="12">
             <div class="project_item_three">
-              <h5>低带宽要求</h5>
+              <h5>三层架构解决带宽膨胀问题</h5>
               <div class="project_detail_three">
-                <p>三层架构网络使跨分片传输所需带宽与分片数量成线性关系</p>
+                <p>三层架构网络使跨分片通信所需带宽与数量关系从平方降低到线性关系</p>
               </div>
               <img src="~/assets/images/web/home/project_three.png" />
             </div>
           </el-col>
           <el-col :span="12">
             <div class="project_item_four">
-              <h5>处理“回滚雪崩”</h5>
+              <h5>快速区块确定化解决回滚雪崩</h5>
               <div class="project_detail_four">
-                <p>片内快速最终确定化和最终确定化后跨分片处理解决“回滚雪崩”</p>
+                <p>片内单区块快速最终确定化和最终确定化后跨分片处理解决“回滚雪崩”</p>
               </div>
               <img src="~/assets/images/web/home/project_four.png" />
             </div>
@@ -130,7 +130,7 @@
               <p><span class="special_h3">高</span>安全性</p>
               <img src="~/assets/images/web/home/result_one.png" />
               <div class="results_detail">
-                <p>经过安全性论证的分片系统，攻击概率为10 ，折合攻击2500年成功一次.</p>
+                <p>经过安全性论证的分片系统，攻击概率为10<sup>-8</sup>，折合攻击2500年成功一次.</p>
               </div>
             </div>
           </el-col>
@@ -490,7 +490,6 @@
       margin: 0 auto;
       border-radius: 8px;
       padding: 5vh 0 0 0;
-      border: 1px salmon solid;
 
       h5 {
         color: #000;
@@ -498,9 +497,9 @@
       }
 
       img {
-        width: 19vh;
-        height: 19vh;
-        margin: 3vh auto;
+        width: 22vh;
+        height: 22vh;
+        margin: 1vh auto;
       }
 
       .questions_detail {
@@ -660,7 +659,7 @@
       .project_detail_two {
         width: 270px;
         text-align: left;
-        margin: 0 auto;
+        margin-left: 30px;
       }
     }
 
@@ -696,7 +695,7 @@
       border-bottom-right-radius: 100%;
       background-color: #fff;
       padding-top: 3vh;
-      padding-left: 40px;
+      padding-left: 31px;
       text-align: left;
 
       img {
@@ -704,7 +703,7 @@
       }
 
       .project_detail_four {
-        width: 215px;
+        width: 210px;
         text-align: center;
       }
     }
@@ -785,11 +784,9 @@
         margin: 3vh auto;
       }
       .last_img {
-        width: 18vh;
-        height: 20vh;
+        width: 24vh;
+        height: 24vh;
         margin: 0 auto;
-        margin-top: 3vh;
-        margin-bottom: 1vh;
       }
 
       .results_detail {
