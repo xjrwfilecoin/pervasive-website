@@ -1,0 +1,14 @@
+{
+  "links": {
+    "chinese": "中 文",
+    "english": "英 文"
+  },
+  "home": {
+    "title": "Welcome",
+    "introduction": "This is an introduction in English."
+  },
+  "about": {
+    "title": "test",
+    "introduction": "This page is made to give you more informations."
+  }
+}
