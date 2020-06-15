@@ -20,7 +20,18 @@ export default function ({
     
     cookies = str2
   }
- 
+  
+  if (route.fullPath == '/') {
+    return redirect('/' + defaultLocale + '' + route.fullPath)
+  } else {
+    let current_path = route.fullPath.substring(1, 3)
+    if (!store.state.locales.includes(current_path)) {
+      cookies = app.i18n.fallbackLocale
+    } else {
+      cookies = current_path
+    }
+  }
+  
   const defaultLocale = cookies || app.i18n.fallbackLocale  // 修改
  
   // If middleware is called from hot module replacement, ignore it
@@ -29,19 +40,20 @@ export default function ({
   }
   // Get locale from params
   const locale = params.lang || defaultLocale
-  // if (!store.state.locales.includes(locale)) {
-  //   return error({
-  //     message: 'This page could not be found.',
-  //     statusCode: 404
-  //   })
-  // }
+  
+  if (!store.state.locales.includes(locale)) {
+    return error({
+      message: 'This page could not be found.',
+      statusCode: 404
+    })
+  }
   // Set locale
   store.commit('SET_LANG', locale)
   app.i18n.locale = store.state.locale
   // If route is /<defaultLocale>/... -> redirect to /...
-  if(route.fullPath == '/') {
-    return redirect('/' + defaultLocale + '' + route.fullPath)
-  }
+  // if (route.fullPath == '/') {
+  //   return redirect('/' + defaultLocale + '' + route.fullPath)
+  // }
   // if (locale === defaultLocale && route.fullPath.indexOf('/' + defaultLocale) === 0) {
   //   const toReplace = '^/' + defaultLocale + (route.fullPath.indexOf('/' + defaultLocale + '/') === 0 ? '/' : '')
   //   const re = new RegExp(toReplace)

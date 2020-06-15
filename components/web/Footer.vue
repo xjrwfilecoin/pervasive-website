@@ -3,36 +3,37 @@
     <div class="footer_box">
       <div class="logoDiv">
         <img src="~/assets/images/LOGO-webBCG.png" class="logo_div"/>
-        <img src="~/assets/images/logo-name.png" class="description"/>
+        <!-- <img src="~/assets/images/logo-name.png" class="description"/> -->
+        <h1 class="description">{{  $t('tabbar.fund') }}</h1>
       </div>
       <div class="footer_row">
         <el-row :gutter="30">
           <el-col :span="8">
             <div class="button_item">
-              <el-button>关于我们</el-button>
-              <el-button style="float:right;width:110px">BLOG</el-button>
+              <el-button>{{ $t('footer.about') }}</el-button>
+              <el-button style="float:right;width:113px;text-align:left">{{ $t('footer.blog') }}</el-button>
             </div>
             <div class="button_item">
-              <el-button>FAQ</el-button>
-              <el-button style="float:right">联系方式</el-button>
+              <el-button>{{ $t('footer.faq') }}</el-button>
+              <el-button style="float:right;width:113px;text-align:left">{{ $t('footer.connect') }}</el-button>
             </div>
             <div class="button_item">
-              <el-button>开发者文档</el-button>
+              <el-button>{{ $t('footer.developer') }}</el-button>
             </div>
             <div class="button_item">
-              <el-button>参与测试</el-button>
+              <el-button>{{ $t('footer.join') }}</el-button>
             </div>
           </el-col>
           <el-col :span="8" :offset="2">
             <div class="connect">
-              <p>Notice me if updated</p>
-              <el-input placeholder="请输入您的邮箱号" size="mini"></el-input>
-              <el-button>提 交</el-button>
+              <p>{{ $t('footer.update') }}</p>
+              <el-input :placeholder="$t('footer.email')" size="mini"></el-input>
+              <el-button>{{ $t('footer.submit') }}</el-button>
             </div>
           </el-col>
           <el-col :span="5" :offset="1">
             <div class="focus">
-              <p>关注我们</p>
+              <p>{{ $t('footer.focus') }}</p>
               <i class="iconfont icon-github"/>
               <i class="iconfont icon-facebook"/>
               <i class="iconfont icon-twitter"/>
@@ -88,7 +89,7 @@
     height: 350px;
   }
   .logoDiv {
-    width: 300px;   
+    width: 306px;   
     height: 90px;
     .logo_div {
       float: left;
@@ -98,14 +99,16 @@
     } 
     .description {
       float: right;
-      width: 144px;
+      color: #fff;
+      font-size: 24px;
+      width: 150px;
       height: 45px;
       margin-top: 40px;
       margin-right: 86px;
     }  
   }
   .footer_row {
-    padding: 20px 0 5vh 150px;
+    padding: 20px 0 0 150px;
     max-width: 1300px;
     margin: 0 auto;
     .button_item {

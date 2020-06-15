@@ -6,17 +6,18 @@
           <el-col :span="4">
             <div class="logoDiv">
               <img src="~/assets/images/LOGO-webBCG.png" class="logo_div"/>
-              <img src="~/assets/images/logo-name.png" class="description"/>
+              <h1 class="description">{{  $t('tabbar.fund') }}</h1>
+              <!-- <img src="~/assets/images/logo-name.png" class="description"/> -->
             </div>
           </el-col>
           <el-col :span="16">
             <div class="web_tab">
               <el-tabs v-model="activeName" @tab-click="handleClick">
-                <el-tab-pane label="首 页" name="home"></el-tab-pane>             
-                <el-tab-pane label="开发者" name="developer"></el-tab-pane>
-                <el-tab-pane label="Blog" name="blog"></el-tab-pane>
-                <el-tab-pane label="生 态" name="ecological"></el-tab-pane>
-                <el-tab-pane label="测 试" name="test"></el-tab-pane>
+                <el-tab-pane :label="$t('tabbar.home')" name="home"></el-tab-pane>             
+                <el-tab-pane :label="$t('tabbar.developers')" name="developer"></el-tab-pane>
+                <el-tab-pane :label="$t('tabbar.blog')" name="blog"></el-tab-pane>
+                <el-tab-pane :label="$t('tabbar.ecological')" name="ecological"></el-tab-pane>
+                <el-tab-pane :label="$t('tabbar.test')" name="test"></el-tab-pane>
               </el-tabs> 
             </div>
           </el-col> 
@@ -64,7 +65,7 @@
     data() {
       return {
         activeName: '',
-        language: '中 文'
+        language: '中 文',
       };
     },
     created() {
@@ -94,13 +95,13 @@
   .web_tab {
     .el-tabs__header {
       line-height: 81px;
-      width: 474px;
+      width: 560px;
     }
     .el-tabs__nav-wrap::after {
       background-color: transparent;
     }
     .el-tabs__item {
-      padding: 0 35px;
+      padding: 0 31px;
       color: #fff;
       height: 33px;
       font-size: 16px;
@@ -123,7 +124,7 @@
     line-height: 60px;
   }    
   .logoDiv {
-    width: 300px;
+    width: 306px;
     margin-left: 9px;
     .logo_div {
       float: left;
@@ -133,9 +134,11 @@
     } 
     .description {
       float: right;
-      width: 144px;
+      color: #fff;
+      font-size: 24px;
+      width: 150px;
       height: 45px;
-      margin-top: 19px;
+      margin-top: 13px;
       margin-right: 86px;
     }  
   }
@@ -146,7 +149,7 @@
   .web_dropdown {
     margin-top: 10px;
     float: right;
-    width: 125px;
+    width: 135px;
     .drop_icon {
       float: left;
       .gitbug_icon {
